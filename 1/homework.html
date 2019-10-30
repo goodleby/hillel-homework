@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+    <button id="clearBtn">Clear console</button>
+    <script>
+        /*I decided to inline it.. let's face it, it's just 5 console commands :) Have a nice day, Denis!*/
+        console.log('Best thing for debuging, you can console anything, from variable to object, function and just text!');
+        console.error('If you want your text to be as cool as tomato, use error as method of console.');
+        console.warn('Do you see it? Yep it\'s exclamation sign at left of this text.');
+        var hi = 'Hello sir!';
+        console.info('The same as log, but you can use some additional features like this variable -> %s', hi);
+        /*And the last one thing you can do with console is.... clear it. Just click the button on the page*/
+        document.querySelector('#clearBtn').addEventListener('click', function() {
+            console.clear();
+        });
+    </script>
+</body>
+</html>
