@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Move A Ball</title>
+    <style>
+        :root {
+            /* Colors */
+            --b: #000;
+            --w: #fff;
+            --red: #e00;
+            --light-gray: #555;
+            --main-bg: #111;
+            --contrast: #a57e94;
+            /* Settings */
+            --animate: all 0.3s ease;
+            /* Font */
+            --20px: 1.25rem;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+            color: inherit;
+        }
+        html, body {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            color: var(--contrast);
+        }
+        a {
+            text-decoration: none;
+        }
+        /* Class-oriented styles */
+        .wrapper {
+            background-color: var(--main-bg);
+            height: 100vH;
+            width: 100vW;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+        .ball {
+            width: 200px;
+            height: 200px;
+            background-color: var(--contrast);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .ball-input {
+            text-align: center;
+            border-radius: 5px;
+            background-color: var(--main-bg);
+            border: none;
+            margin: 5px 0;
+            font-size: var(--20px);
+            max-width: 65%;
+        }
+        .ghost-title {
+            color: var(--light-gray);
+            opacity: 0.4;
+            position: absolute;
+            top: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="ghost-title">Use arrows to control the ball</h1>
+        <div class="ball">
+            <input type="text" class="ball-input distance" value="50" placeholder="distance">
+            <input type="text" class="ball-input time" value="100" placeholder="time">
+            <input type="text" class="ball-input easing" value="linear" placeholder="easing">
+            <input type="text" class="ball-input scale" value="1" placeholder="scale">
+        </div>
+    </div>
+    <script src="moveABall.js"></script>
+</body>
+</html>
