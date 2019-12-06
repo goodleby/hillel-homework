@@ -1,14 +1,22 @@
-//max, min (default = 0) excluding max
-function getRandInt(max, min = 0) {
-    return Math.floor(Math.random() * (max - min) + min);
+/**
+ * @param {integer} min 
+ * @param {integer} max
+ * @description Returns random integer between @param min and @param max (including both).
+ *              If only one parameter is passed it will return random integer from 0 in range = passed parameter
+ */
+function getRandInt(min, max) {
+    if(max === undefined) {max = min - 1; min = 0}
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 function getRandStr(len) {
+    var __fn = arguments.callee;
     var str = '';
     for(var i = 0; i < len; i++) {
-        str += alphabet[getRandInt(26)];
+        str += __fn.alphabet[getRandInt(__fn.alphabet.length)];
     }
     return str;
 }
+getRandStr.alphabet = 'abcdefghijklmnopqrstuvwxyz';
 function getRandWords(stringsAmount, minCharacters, maxCharacters) {
     var result = {};
     for(var i = 0; i < stringsAmount; i++) {
@@ -19,11 +27,12 @@ function getRandWords(stringsAmount, minCharacters, maxCharacters) {
     }
     return result;
 }
-var stringsAmount = 20//Number(prompt('What amount of strings do you need?')),
-    minCharacters = 2//Number(prompt('What is minimum of characters in a string?')),
-    maxCharacters = 5//Number(prompt('What is maximum of characters in a string?'));
-var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
+
+
+var stringsAmount = 20,//Number(prompt('What amount of strings do you need?')),
+    minCharacters = 2,//Number(prompt('What is minimum of characters in a string?')),
+    maxCharacters = 5;//Number(prompt('What is maximum of characters in a string?'));
 var randWordsObj = getRandWords(stringsAmount, minCharacters, maxCharacters);
 for(var key in randWordsObj) console.log('Added ' + randWordsObj[key].length + ' words with ' + key + ' characters');
 console.log(randWordsObj);
