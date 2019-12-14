@@ -18,7 +18,7 @@ var casino = {
         return arr.map(() => getRandInt(arr.length));
     },
     fillLines: function(linesAmount, fromArray) {
-        return this.lines = Array(linesAmount).fill(1).map(() => this.createRandLine(fromArray))
+        return this.lines = Array(linesAmount).fill(1).map(() => this.createRandLine(fromArray));
     },
     horizontalMatch: function() {
         return this.lines[0].some((item, i) => this.lines.every(line => line[i] === item));
