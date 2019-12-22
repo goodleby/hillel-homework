@@ -17,9 +17,9 @@ var Player = (function() {
 	};
 	Player.prototype.levelUp = function() {
 		var lvlPercentModifier = this.getPercentModifier(++this.lvl);
-		var takenDamage = this.maxHp - this.hp;
-		this.maxHp = Math.round(defs.hp * lvlPercentModifier);
-		this.hp = this.maxHp - takenDamage;
+		// var takenDamage = this.maxHp - this.hp;
+		this.maxHp = this.hp = Math.round(defs.hp * lvlPercentModifier);
+		// this.hp = this.maxHp - takenDamage;
 		this.dmg = Math.round(defs.dmg * lvlPercentModifier);
 	};
 	Player.prototype.getCell = function() {

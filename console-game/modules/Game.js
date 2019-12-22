@@ -1,5 +1,44 @@
 var Game = (function() {
+  var levels = [
+    {
+      startPlayerPos: 0,
+      size: 14,
+      monsters: {
+        elements: [CrocoTurtle, CrayMonkey],
+        amount: 3
+      },
+      obstacles: {
+        elements: [Tree],
+        amount: 0
+      }
+    },
+    {
+      startPlayerPos: 0,
+      size: 14,
+      monsters: {
+        elements: [CrocoTurtle, CrayMonkey],
+        amount: 4
+      },
+      obstacles: {
+        elements: [Tree],
+        amount: 0
+      }
+    },
+    {
+      startPlayerPos: 0,
+      size: 14,
+      monsters: {
+        elements: [CrocoTurtle, CrayMonkey],
+        amount: 5
+      },
+      obstacles: {
+        elements: [Tree],
+        amount: 0
+      }
+    }
+  ];
 	var Game = function(renderSelector, player) {
+    this.levels = levels;
 		this.renderSelector = renderSelector;
 		this.player = player || new Player(1);
 		this.play = false;
@@ -23,24 +62,10 @@ var Game = (function() {
 		this.viewField = viewField > 0 ? viewField : this.level.path.length;
 	};
 	Game.prototype.startLevel = function(levelIndex) {
-		var levels = [
-			{
-				startPlayerPos: 0,
-				size: 14,
-				monsters: {
-					elements: [CrocoTurtle, CrayMonkey],
-					amount: 13
-				},
-				obstacles: {
-					elements: [Tree],
-					amount: 0
-				}
-			}
-		];
 		this.levelIndex = levelIndex;
-		if (this.levelIndex > levels.length)
+		if (this.levelIndex > this.levels.length)
 			throw new Error('Attempt to initialize game with non existing level!');
-		var levelOptions = levels[this.levelIndex - 1];
+		var levelOptions = this.levels[this.levelIndex - 1];
 		this.player.setPos(levelOptions.startPlayerPos);
 		this.level = new Level(levelOptions.size, this.player);
 		this.level.spawnMonsters(levelOptions.monsters.elements, levelOptions.monsters.amount);
@@ -143,7 +168,10 @@ var Game = (function() {
 	};
 	Game.prototype.win = function() {
 		this.play = false;
-		alert('You won!');
+    var self = this;
+    self = new Game(this.renderSelector, this.player);
+    if(this.levels[this.levelIndex]) game.startLevel(this.levelIndex + 1);
+    else alert('You won!');
 	};
 	Game.prototype.lose = function() {
 		this.play = false;
