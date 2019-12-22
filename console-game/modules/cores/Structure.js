@@ -1,4 +1,4 @@
 var Structure = (function() {
-  var Structure = function() {};
-  return Structure;
+	var Structure = function() {};
+	return Structure;
 })();
