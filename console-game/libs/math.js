@@ -1,8 +1,7 @@
 /**
- * @param {Number} min
- * @param {Number} max
- * @description Returns random Number between @param min and @param max (including both).
- *              If only one parameter is passed it will return random Number from 0 in range = passed parameter
+ * @arg {number} min
+ * @arg {number} max
+ * @return Random number between `min` and `max` (including both). If only one arg is passed, it will return random number from 0 in range = passed arg.
  */
 function getRandInt(min, max) {
   if (max === undefined) {
@@ -12,10 +11,10 @@ function getRandInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 /**
- * @param {Number} successes
- * @param {Number} fails
- * @description Get random boolean value with chance = succeses / fails (ratio)
+ * @arg {number} successes - default = 1
+ * @arg {number} fails - default = 1
+ * @return Random boolean value with chance ratio = `successes` / `fails`
  */
-function getRandBool(successes, fails) {
+function getRandBool(successes = 1, fails = 1) {
   return Math.floor(Math.random() * (fails + successes)) >= fails;
 }

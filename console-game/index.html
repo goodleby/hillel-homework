@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
-		<style>
-			:root {
-				/* Colors */
-				--w: #fff;
-				--b: #000;
-				--r: #b22234;
-				--orange: #f90;
-				--green: #0f7;
-				--main-gray: #111;
-				--contrast: #a57e94;
-				/* Settings */
-				--animate: all 400ms ease;
-				--dark-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.06);
-				/* Fonts */
-				--s16px: 1rem;
-			}
-			*,
-			*::before,
-			*::after {
-				box-sizing: inherit;
-				color: inherit;
-			}
-			html,
-			body {
-				box-sizing: border-box;
-				font-family: sans-serif;
-				font-size: 16px;
-				margin: 0;
-				padding: 0;
-				color: var(--w);
-				background-color: var(--main-gray);
-			}
-			a {
-				text-decoration: none;
-			}
-			/* Class-oriented styling */
-			.page {
-				width: 100%;
-				height: 100vh;
-				position: relative;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			.field {
-				display: flex;
-				justify-content: center;
-			}
-			.cell {
-				margin: 5px;
-				width: 70px;
-				height: 70px;
-			}
-			.cell > div {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="page">
-			<div class="field"></div>
-		</div>
-		<script src="libs/math.js"></script>
-		<!-- Cores -->
-		<script src="modules/cores/unit.js"></script>
-		<script src="modules/cores/obstacle.js"></script>
-		<script src="modules/cores/structure.js"></script>
-		<!--Units-->
-		<script src="modules/monsters/crayMonkey.js"></script>
-		<script src="modules/monsters/crocoTurtle.js"></script>
-		<!--Obstacles-->
-		<script src="modules/obstacles/tree.js"></script>
-		<!--Structures-->
-		<script src="modules/structures/grass.js"></script>
-		<!--Special-->
-		<script src="modules/player.js"></script>
-		<script src="modules/level.js"></script>
-		<script src="modules/game.js"></script>
-		<!--Main-->
-		<script src="main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      :root {
+        /* Colors */
+        --w: #fff;
+        --b: #000;
+        --r: #b22234;
+        --orange: #f90;
+        --green: #0f7;
+        --main-gray: #111;
+        --contrast: #a57e94;
+        /* Settings */
+        --animate: all 400ms ease;
+        --dark-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.06);
+        /* Fonts */
+        --s16px: 1rem;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+        color: inherit;
+      }
+      html,
+      body {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        color: var(--w);
+        background-color: var(--main-gray);
+      }
+      a {
+        text-decoration: none;
+      }
+      /* Class-oriented styling */
+      .page {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .field {
+        display: flex;
+        justify-content: center;
+      }
+      .cell {
+        margin: 5px;
+        width: 70px;
+        height: 70px;
+      }
+      .cell > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="field"></div>
+    </div>
+    <script src="libs/math.js"></script>
+    <!-- Cores -->
+    <script src="modules/cores/unit.js"></script>
+    <script src="modules/cores/obstacle.js"></script>
+    <script src="modules/cores/structure.js"></script>
+    <!--Units-->
+    <script src="modules/monsters/crayMonkey.js"></script>
+    <script src="modules/monsters/crocoTurtle.js"></script>
+    <!--Obstacles-->
+    <script src="modules/obstacles/tree.js"></script>
+    <!--Structures-->
+    <script src="modules/structures/grass.js"></script>
+    <!--Special-->
+    <script src="modules/player.js"></script>
+    <script src="modules/level.js"></script>
+    <script src="modules/game.js"></script>
+    <!--Main-->
+    <script src="main.js"></script>
+  </body>
 </html>
