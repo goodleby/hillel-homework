@@ -1,0 +1,67 @@
+.starship {
+  width: 20%;
+  background-color: #333;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 24px;
+  margin: 24px 0;
+  min-width: 260px;
+}
+.starship__name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #b22234;
+  margin-bottom: 10px;
+}
+.starship__cost {
+  color: yellow;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.starship__cost::before {
+  content: url(./cost.svg);
+  margin-right: 5px;
+}
+.starship__length {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.starship__length::before {
+  content: url('./ruler.svg');
+  margin-right: 5px;
+}
+.starship__crew {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.starship__crew::before {
+  content: url('./r2d2.svg');
+  margin-right: 5px;
+}
+.starship__passengers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.starship__passengers::before {
+  content: url('./passenger.svg');
+  margin-right: 5px;
+}
+.starship__consumables {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.starship__consumables::before {
+  content: url(./food.svg);
+  margin-right: 5px;
+}
